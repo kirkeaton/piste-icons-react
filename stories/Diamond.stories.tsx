@@ -17,10 +17,7 @@ export default {
   },
 };
 
-const Template = (args) => {
-  console.log("args", args);
-  return <Diamond {...args} />;
-};
+const Template = (args) => <Diamond {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
