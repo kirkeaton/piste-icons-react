@@ -37,5 +37,8 @@ jobs:
           cache: 'pnpm'
       - run: |
           sed -i 's/"react": ".*",/"react": "${{ matrix.react-version }}",/' package.json
+          sed -i 's/"react-dom": ".*",/"react-dom": "${{ matrix.react-version }}",/' package.json
+          sed -i 's/"@types\/react": ".*",/"@types\/react": "${{ matrix.react-version }}",/' package.json
+          sed -i 's/"@types\/react-dom": ".*",/"@types\/react-dom": "${{ matrix.react-version }}",/' package.json
       - run: pnpm install --no-frozen-lockfile
       - run: pnpm build
