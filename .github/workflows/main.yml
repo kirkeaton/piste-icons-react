@@ -16,7 +16,7 @@ jobs:
       - run: pnpm install
       - run: pnpm prettier --check "*.{cjs,json,md,ts,tsx}"
   test:
-    name: Node.js ${{ matrix.node-version }}
+    name: Node.js ${{ matrix.node-version }} / React ${{ matrix.react-version }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
