@@ -35,6 +35,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
-      - run: sed -i 's/"react": ".*",/"react": "${{ matrix.react-version }}",/' package.json
+      - run: |
+          sed -i 's/"react": ".*",/"react": "${{ matrix.react-version }}",/' package.json
       - run: pnpm install
       - run: pnpm build
