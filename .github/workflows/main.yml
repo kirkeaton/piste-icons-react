@@ -25,6 +25,9 @@ jobs:
           - 22
           - 20
           - 18
+        react-version:
+          - '^16'
+          - '^18'
     steps:
       - uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
       - uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # v4.0.0
@@ -32,5 +35,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
+      - run: sed -i 's/"react": ".*",/"react": "${{ matrix.react-version }}",/' package.json
       - run: pnpm install
       - run: pnpm build
