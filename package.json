@@ -40,8 +40,8 @@
   "license": "BSD-3-Clause",
   "packageManager": "pnpm@9.12.1",
   "peerDependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": "^16 || ^18",
+    "react-dom": "^16 || ^18"
   },
   "publishConfig": {
     "access": "public"
